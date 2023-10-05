@@ -15,7 +15,7 @@ def login1():
         password = request.form["password"]
         if (username == "Aryan" and password=="1234"):
             session["email"]= username
-            return render_template("target.html", email = username)
+            return render_template("Main.html", email = username)
         else:
             msg = "Invalid Username or Password"
             return render_template("login.html", msg = msg)
