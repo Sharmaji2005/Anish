@@ -1,0 +1,311 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans MT';
+}
+html,body{
+    height:100%;
+    width: 100%;
+    cursor: none;
+}
+.banner{
+    position:relative;
+    height:100vh;
+}
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:30px 5%;
+    background:transparent;
+    display:flex;
+    align-items: center;
+    z-index:100;
+}
+.logo {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(253, 253, 253, 0.774);
+}
+.logo span{
+    font-size: 50px;
+    display: table-cell;
+    animation: animate linear infinite ;
+    animation-duration: 3s;
+    overflow: hidden;
+}
+.logo span:nth-child(1){
+    animation-delay: 0s;
+}
+.logo span:nth-child(2){
+    animation-delay: 0.25s;
+}.logo span:nth-child(3){
+    animation-delay: 0.5s;
+}.logo span:nth-child(4){
+    animation-delay: 0.75s;
+}.logo span:nth-child(5){
+    animation-delay: 1s;
+}.logo span:nth-child(6){
+    animation-delay: 1.25s;
+}
+@keyframes animate{
+    0%{
+        filter:blur(2px);
+        color:#090909;
+        text-shadow: 0 0 10px ;
+                     0 0 20px ,
+                    0 0 40px ,
+                    0 0 80px ;
+    }
+    5%,95%{
+        color:grey;
+        filter:blur(0px);
+      
+    }
+}
+.socialmedia{
+    margin:0 auto 0 50px;
+}
+.socialmedia a{
+    display:inline-flex;
+    width:40px;
+    height:40px;
+    background:transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.socialmedia a:hover{
+    background-color:white;
+    color:rgb(28, 116, 28);
+    transform: scale(1.5);
+    box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.2);
+}
+.navbar a {
+    font-size: 19px;
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:30px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+.option:hover{
+    cursor:none;
+    border: #fff solid 2px;
+    border-radius: 20px;
+    padding: 8px;
+}
+.target {
+    opacity: 0.5;
+    position: relative;
+  }
+  
+  .target::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+  
+  @keyframes drawLine {
+    from {
+      transform: scaleX(0);
+      transform-origin: center left;
+    }
+    
+    to {
+      transform: scaleX(1);
+      transform-origin: center right;
+    }
+  }
+  
+  .target::before {
+   animation-name: drawLine;
+   animation-duration: 2s; /* Adjust the duration as per your preference */
+   animation-timing-function: ease-in-out; /* Adjust the timing function as per your preference */
+   animation-fill-mode: forwards; /* Keeps the final state of the animation */
+  }
+
+  .option {
+    opacity: 1;
+    position: relative;
+  }
+  
+  .option::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust the distance of the line from the text */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+  
+  @keyframes drawLine {
+    from {
+      transform: scaleX(0);
+      transform-origin: center left;
+    }
+    
+    to {
+      transform: scaleX(1);
+      transform-origin: center right;
+    }
+  }
+  
+  .option::after {
+   animation-name: drawLine;
+   animation-duration: 2s; /* Adjust the duration as per your preference */
+   animation-timing-function: ease-in-out; /* Adjust the timing function as per your preference */
+   animation-fill-mode: forwards; /* Keeps the final state of the animation */
+  }
+
+.banner img{
+    position:relative;
+    width:100%;
+    height:100vh;
+}
+.slider .slide{
+    position: absolute;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.slide .left-info{
+    position:absolute;
+    top:0%;
+    height:100vh;
+    width:50%;
+    left:0;
+}
+.left-info .penetrate-blur{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    background:rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   backdrop-filter: blur(5px);
+   -webkit-mask:linear-gradient(#000 0 0),
+   linear-gradient(#000 0 0);
+   -webkit-mask-clip:text,padding-box;
+   -webkit-mask-composite:xor;
+}
+.penetrate-blur h1{
+    font-size:220px;
+    color:white;
+}
+.left-info .content{
+    position: absolute;
+    bottom:2%;
+    left:10%;
+    color:white;
+}
+.content h3{
+    font-size:20px;
+}
+.content p{
+    margin:10px 0 15px;
+    font-size: 16px;
+}
+
+.content .btn{
+    display: inline-block;
+    background: white;
+    border:2px solid white;
+    border-radius: 6px;
+    font-size: 16px;
+    padding:13px 28px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color:black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content .btn:hover{
+    transform: scale(1.1);
+    background:transparent;
+    color:white;
+}
+.slide .right-info{
+    position: absolute;
+    right:0;
+    top:0;
+    width:50%;
+    height:100vh;
+    color:white;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    background:rgba(0, 0, 0, 0.2);
+}
+.right-info h1{
+    font-size: 218px;
+}
+.right-info h3{
+    font-size: 70px;
+    color:white;
+    position: absolute;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(150%);
+    margin-left: 13px;
+}
+
+#page2{
+    height:100vh;
+    width:100%;
+    object-fit:cover;
+    background: linear-gradient(to bottom left, black,rgba(223, 97, 14, 0.856));
+    display: flex;
+}
+
+#cursor{
+    height:14px;
+    width:14px;
+    background-color:white;
+    position:absolute;
+    border-radius: 50%;
+    transition: all linear 0.4;
+    
+}
+
+.support{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	padding: 10px;
+	display: flex;
+	a{
+		margin: 0 10px;
+		color: #fff;
+		font-size: 1.8rem;
+		backface-visibility: hidden;
+		transition: all 150ms ease;
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
+}
+.chatbot{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: rgb(244, 12, 12);
+    position: relative;
+    z-index: 100;
+    display: flex;
+    right: 0;
+}
